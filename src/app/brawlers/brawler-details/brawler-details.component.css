@@ -1,0 +1,11 @@
+div.container div.row {
+  margin: 100px;
+}
+
+button .btn-warning.hide{
+  display:  none;
+}
+
+button {
+  margin-right: 10px;
+}

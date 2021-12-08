@@ -1,0 +1,20 @@
+<div class='container'>
+    <div class='row'>
+        <ng-container  *ngTemplateOutlet="liveTemplate">
+        </ng-container>
+    </div>
+
+    <!-- There is a "hide" css class, which you can use it. -->
+    <button class="btn btn-info" (click)="goBack()">go back</button>
+    <button class="btn btn-warning" (click)="edit()" *ngIf="isShowEdit">edit</button>
+
+</div>
+
+<ng-template #brawlerDetails>
+    <app-brawler-display [brawlerContent] = brawlerContent></app-brawler-display>
+</ng-template>
+
+<ng-template #brawlerEditing>
+    <app-brawler-form  (goBack)="onCancel()" [brawlerContent] = brawlerContent [isEdit]="true" (dataSubmit)="onSubmit($event)">
+    </app-brawler-form>
+</ng-template>

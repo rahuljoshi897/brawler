@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-hover">
+            <caption>Details</caption>
+            <tbody>
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td>{{brawlerContent?.name}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Health</strong></td>
+                    <td>{{brawlerContent?.health}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Power</strong></td>
+                    <td>{{brawlerContent?.power}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Type</strong></td>
+                    <td>{{getType(brawlerContent.type)}}</td>
+
+                    <!-- There is a custom pipe, which can display the enum type, string value. This is how you can use it.
+                   <td>{{ currentBrawler.Type | enumAsString:brawlerTypes }}</td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
